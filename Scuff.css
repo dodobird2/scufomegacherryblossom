@@ -7,33 +7,28 @@ body {
 }
 
 .controller.custom {
-  width: 750px !important;
-  height: 750px !important;
+  width: 1000px !important;
+  height: 500px !important;
   position: relative !important;
   overflow: visible !important;
 
-  /* Debug background — remove after the controller image appears */
-  background-color: transparent !important;
-
-  background-image: url("https://res.cloudinary.com/scuf-pwa/image/upload/%2Cw_1100%2Ch_1100%2Cq_85/q_auto%2Cf_auto/v1779907965/products/Omega/DESIGNS/Dark%20Cherry/omega-darkcherry-front-playstation-ps5-controller-750x750_2x_lkahsq.png") !important;
+  background-image: url("https://raw.githack.com/dodobird2/scufomegacherryblossom/main/omega.png") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
-
-  border: none !important;
-  border-radius: 0 !important;
 }
 
-/* Hide the default GamepadViewer artwork */
+/* Hide default GamepadViewer art */
 .controller.custom div {
   background-image: none !important;
 }
 
-/* Make presses glow */
+/* Button press glow */
 .controller.custom .pressed {
-  background: rgba(255, 80, 180, 0.85) !important;
+  background: rgba(255, 80, 180, 0.9) !important;
   box-shadow:
     0 0 10px #ff69b4,
-    0 0 25px #ffb6df !important;
+    0 0 25px #ffb6df,
+    0 0 40px rgba(255, 105, 180, 0.7) !important;
   opacity: 1 !important;
 }
