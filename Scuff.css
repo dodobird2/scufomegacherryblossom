@@ -1,22 +1,308 @@
+/* SCUF Omega Cherry Blossom - GamepadViewer Custom CSS */
+/* Use with: https://gamepadviewer.com/?p=1&css=YOUR_RAW_CSS_LINK */
+
+/* Page cleanup */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  overflow: hidden !important;
+}
+
+/* Main controller area */
 .controller.custom {
-  width: 600px !important;
-  height: 600px !important;
-  background: none !important;
+  width: 750px !important;
+  height: 750px !important;
   position: relative !important;
+  background: transparent !important;
+  background-image: none !important;
   overflow: visible !important;
 }
 
+/* Hide the default Xbox skin pieces */
+.controller.custom .triggers,
+.controller.custom .bumpers,
+.controller.custom .quadrant,
+.controller.custom .arrows,
+.controller.custom .abxy,
+.controller.custom .sticks,
+.controller.custom .dpad,
+.controller.custom .meta {
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Cherry Blossom SCUF Omega controller body */
 .controller.custom::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://res.cloudinary.com/scuf-pwa/image/upload/,w_1100,h_1100,q_85/q_auto,f_auto/v1778167156/products/Omega/omega-cherryblossom-front-playstation-ps5-controller-750x750_2x_qn5kx3.png") !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
+  background-image: url("https://res.cloudinary.com/scuf-pwa/image/upload/,w_1100,h_1100,q_85/q_auto,f_auto/v1778167156/products/Omega/omega-cherryblossom-front-playstation-ps5-controller-750x750_2x_qn5kx3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   z-index: 1;
+  pointer-events: none;
 }
 
+/* Keep all GamepadViewer input elements above the controller image */
 .controller.custom * {
-  background-image: none !important;
+  position: absolute;
+  z-index: 5;
+}
+
+/* General pressed glow */
+.controller.custom .pressed {
+  filter:
+    drop-shadow(0 0 6px #ff7acb)
+    drop-shadow(0 0 14px #ffb6df)
+    brightness(1.35) !important;
+  opacity: 1 !important;
+}
+
+/* Face buttons */
+.controller.custom .abxy {
+  top: 285px !important;
+  left: 515px !important;
+  width: 145px !important;
+  height: 145px !important;
+}
+
+.controller.custom .button {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 180, 220, 0.28) !important;
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 0 8px rgba(255, 122, 203, 0.65) !important;
+}
+
+.controller.custom .button.pressed {
+  background: rgba(255, 105, 190, 0.85) !important;
+  border-color: #ffffff !important;
+  box-shadow:
+    0 0 10px #ff7acb,
+    0 0 24px #ffb6df !important;
+}
+
+/* Xbox-style ABXY positions */
+.controller.custom .a {
+  top: 88px !important;
+  left: 52px !important;
+}
+
+.controller.custom .b {
+  top: 48px !important;
+  left: 94px !important;
+}
+
+.controller.custom .x {
+  top: 48px !important;
+  left: 10px !important;
+}
+
+.controller.custom .y {
+  top: 8px !important;
+  left: 52px !important;
+}
+
+/* Sticks */
+.controller.custom .sticks {
+  top: 0 !important;
+  left: 0 !important;
+  width: 750px !important;
+  height: 750px !important;
+}
+
+.controller.custom .stick {
+  width: 84px !important;
+  height: 84px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 220, 238, 0.38) !important;
+  border: 3px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow:
+    inset 0 0 10px rgba(255, 122, 203, 0.7),
+    0 0 14px rgba(255, 122, 203, 0.7) !important;
+}
+
+.controller.custom .stick.left {
+  top: 360px !important;
+  left: 178px !important;
+}
+
+.controller.custom .stick.right {
+  top: 425px !important;
+  left: 465px !important;
+}
+
+.controller.custom .stick.pressed {
+  background: rgba(255, 105, 190, 0.85) !important;
+}
+
+/* D-pad */
+.controller.custom .dpad {
+  top: 420px !important;
+  left: 265px !important;
+  width: 120px !important;
+  height: 120px !important;
+}
+
+.controller.custom .face {
+  width: 40px !important;
+  height: 40px !important;
+  background: rgba(255, 190, 225, 0.3) !important;
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 0 8px rgba(255, 122, 203, 0.5) !important;
+}
+
+.controller.custom .face.pressed {
+  background: rgba(255, 105, 190, 0.85) !important;
+  box-shadow:
+    0 0 10px #ff7acb,
+    0 0 22px #ffb6df !important;
+}
+
+.controller.custom .face.up {
+  top: 0 !important;
+  left: 40px !important;
+}
+
+.controller.custom .face.down {
+  top: 80px !important;
+  left: 40px !important;
+}
+
+.controller.custom .face.left {
+  top: 40px !important;
+  left: 0 !important;
+}
+
+.controller.custom .face.right {
+  top: 40px !important;
+  left: 80px !important;
+}
+
+/* Bumpers */
+.controller.custom .bumpers {
+  top: 145px !important;
+  left: 105px !important;
+  width: 540px !important;
+  height: 70px !important;
+}
+
+.controller.custom .bumper {
+  width: 150px !important;
+  height: 42px !important;
+  border-radius: 24px !important;
+  background: rgba(255, 190, 225, 0.25) !important;
+  border: 2px solid rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 0 10px rgba(255, 122, 203, 0.5) !important;
+}
+
+.controller.custom .bumper.left {
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.controller.custom .bumper.right {
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.controller.custom .bumper.pressed {
+  background: rgba(255, 105, 190, 0.85) !important;
+  box-shadow:
+    0 0 10px #ff7acb,
+    0 0 24px #ffb6df !important;
+}
+
+/* Triggers */
+.controller.custom .triggers {
+  top: 75px !important;
+  left: 110px !important;
+  width: 530px !important;
+  height: 70px !important;
+}
+
+.controller.custom .trigger {
+  width: 140px !important;
+  height: 50px !important;
+  border-radius: 24px !important;
+  background: rgba(255, 190, 225, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.65) !important;
+  box-shadow: 0 0 10px rgba(255, 122, 203, 0.45) !important;
+}
+
+.controller.custom .trigger.left {
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.controller.custom .trigger.right {
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.controller.custom .trigger.pressed {
+  background: rgba(255, 105, 190, 0.85) !important;
+  box-shadow:
+    0 0 10px #ff7acb,
+    0 0 24px #ffb6df !important;
+}
+
+/* Start / Select / Home buttons */
+.controller.custom .meta {
+  top: 315px !important;
+  left: 280px !important;
+  width: 190px !important;
+  height: 80px !important;
+}
+
+.controller.custom .back,
+.controller.custom .start,
+.controller.custom .home {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 190, 225, 0.3) !important;
+  border: 2px solid rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 0 8px rgba(255, 122, 203, 0.55) !important;
+}
+
+.controller.custom .back {
+  left: 0 !important;
+  top: 20px !important;
+}
+
+.controller.custom .home {
+  left: 76px !important;
+  top: 0 !important;
+}
+
+.controller.custom .start {
+  right: 0 !important;
+  top: 20px !important;
+}
+
+.controller.custom .back.pressed,
+.controller.custom .start.pressed,
+.controller.custom .home.pressed {
+  background: rgba(255, 105, 190, 0.85) !important;
+  box-shadow:
+    0 0 10px #ff7acb,
+    0 0 24px #ffb6df !important;
+}
+
+/* Optional soft cherry blossom glow around the whole controller */
+.controller.custom::after {
+  content: "";
+  position: absolute;
+  inset: 70px;
+  border-radius: 45%;
+  box-shadow:
+    0 0 35px rgba(255, 122, 203, 0.45),
+    0 0 70px rgba(255, 190, 225, 0.25);
+  z-index: 0;
+  pointer-events: none;
 }
