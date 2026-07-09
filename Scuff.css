@@ -13,15 +13,15 @@ body {
   overflow: visible !important;
 
   /* Debug background — remove after the controller image appears */
-  background-color: hotpink !important;
+  background-color: transparent !important;
 
   background-image: url("https://res.cloudinary.com/scuf-pwa/image/upload/%2Cw_1100%2Ch_1100%2Cq_85/q_auto%2Cf_auto/v1779907965/products/Omega/DESIGNS/Dark%20Cherry/omega-darkcherry-front-playstation-ps5-controller-750x750_2x_lkahsq.png") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
 
-  border: 6px solid white !important;
-  border-radius: 40px !important;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
 /* Hide the default GamepadViewer artwork */
