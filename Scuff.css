@@ -11,36 +11,25 @@ body {
   height: 750px !important;
   position: relative !important;
   overflow: visible !important;
-  background: hotpink !important;
+
+  /* Debug background — remove after the controller image appears */
+  background-color: hotpink !important;
+
+  background-image: url("https://res.cloudinary.com/scuf-pwa/image/upload/%2Cw_1100%2Ch_1100%2Cq_85/q_auto%2Cf_auto/v1779907965/products/Omega/DESIGNS/Dark%20Cherry/omega-darkcherry-front-playstation-ps5-controller-750x750_2x_lkahsq.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+
   border: 6px solid white !important;
   border-radius: 40px !important;
 }
 
-/* Hide GamepadViewer's default skin pieces */
+/* Hide the default GamepadViewer artwork */
 .controller.custom div {
   background-image: none !important;
 }
 
-/* SCUF Omega Cherry Blossom controller image */
-.controller.custom::before {
-  content: "";
-  position: absolute !important;
-  inset: 0 !important;
-  background-image: url("https://res.cloudinary.com/scuf-pwa/image/upload/w_1100,h_1100,q_85/q_auto,f_auto/v1778167156/products/Omega/omega-cherryblossom-front-playstation-ps5-controller-750x750_2x_qn5kx3.png") !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: contain !important;
-  z-index: 1 !important;
-  pointer-events: none !important;
-}
-
-/* Keep GamepadViewer input overlays above the controller image */
-.controller.custom > div {
-  position: absolute !important;
-  z-index: 5 !important;
-}
-
-/* Simple pink glow when buttons are pressed */
+/* Make presses glow */
 .controller.custom .pressed {
   background: rgba(255, 80, 180, 0.85) !important;
   box-shadow:
