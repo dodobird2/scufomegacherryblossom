@@ -13,14 +13,13 @@ body {
   overflow: visible !important;
 
   /* Debug fallback so it is never blank */
-  background-color: hotpink !important;
+  background-color: transparent !important;
+  border: none !important;
 
   background-image: url("https://img.magnific.com/free-vector/abstract-hologram-gradient-background_1048-10069.jpg") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: contain !important;
-
-  border: 8px solid white !important;
 }
 
 .controller.custom::before {
