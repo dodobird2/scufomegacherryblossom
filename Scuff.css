@@ -1,5 +1,5 @@
 /* 1. Reset canvas size, add custom backing frame, and hide default assets */
-.controller.ps5 {
+.controller.xbox-one {
     background-image: none !important;
     background: rgba(255, 183, 197, 0.05) !important; /* Translucent pink background card */
     border: 2px solid rgba(255, 105, 180, 0.3) !important; /* Soft neon border */
@@ -10,17 +10,17 @@
     position: relative !important;
     box-sizing: border-box !important;
 }
-.controller.ps5 .face, 
-.controller.ps5 .dpad, 
-.controller.ps5 .stick, 
-.controller.ps5 .bumper, 
-.controller.ps5 .trigger, 
-.controller.ps5 .touchpad {
+.controller.xbox-one .face, 
+.controller.xbox-one .dpad, 
+.controller.xbox-one .stick, 
+.controller.xbox-one .bumper, 
+.controller.xbox-one .trigger, 
+.controller.xbox-one .touchpad {
     position: absolute !important;
 }
  
 /* 2. Display your transparent custom SCUF controller */
-.controller.ps5::before {
+.controller.xbox-one::before {
     content: "";
     position: absolute;
     top: 50px;
@@ -34,7 +34,7 @@
 }
  
 /* 3. Aesthetic glow styling for standard pressed buttons (Soft Pink) */
-.controller.ps5 .pressed {
+.controller.xbox-one .pressed {
     opacity: 0.75 !important;
     background-color: #ffb7c5 !important; 
     box-shadow: 0 0 12px #ff69b4, 0 0 4px #ffb7c5 !important; 
@@ -43,7 +43,7 @@
 }
  
 /* 4. Touchpad mapping & activation glow */
-.controller.ps5 .touchpad {
+.controller.xbox-one .touchpad {
     top: 145px !important;
     left: 215px !important;
     width: 170px !important;
@@ -51,22 +51,22 @@
     border-radius: 8px !important;
     z-index: 4 !important;
 }
-.controller.ps5 .touchpad.pressed {
+.controller.xbox-one .touchpad.pressed {
     background-color: rgba(255, 183, 197, 0.4) !important;
     box-shadow: 0 0 16px #ff69b4, inset 0 0 10px #ffb7c5 !important;
     border-radius: 8px !important;
 }
  
 /* 5. Vibrant Magenta modifier for Triggers (L2 / R2) */
-.controller.ps5 .triggers .trigger.left.pressed,
-.controller.ps5 .triggers .trigger.right.pressed {
+.controller.xbox-one .triggers .trigger.left.pressed,
+.controller.xbox-one .triggers .trigger.right.pressed {
     background-color: #ff007f !important; 
     box-shadow: 0 0 18px #ff0055, 0 0 6px #ff007f !important; 
     border-radius: 6px !important;
 }
  
 /* 6. Dynamic Analog Sticks (Color shifts on movement) */
-.controller.ps5 .stick {
+.controller.xbox-one .stick {
     width: 76px !important;
     height: 76px !important;
     background: rgba(255, 183, 197, 0.25) !important; 
@@ -77,18 +77,18 @@
 }
  
 /* Triggers as soon as the stick leaves the deadzone center */
-.controller.ps5 .stick:not([style*="transform: translate(0px, 0px)"]) {
+.controller.xbox-one .stick:not([style*="transform: translate(0px, 0px)"]) {
     background: rgba(255, 0, 127, 0.6) !important; 
     box-shadow: 0 0 14px #ff0055, 0 0 4px #ff007f !important; 
 }
  
 /* Explicit stick positions */
-.controller.ps5 .stick.left { top: 288px !important; left: 198px !important; }
-.controller.ps5 .stick.right { top: 288px !important; left: 324px !important; }
+.controller.xbox-one .stick.left { top: 288px !important; left: 198px !important; }
+.controller.xbox-one .stick.right { top: 288px !important; left: 324px !important; }
  
 /* 7. Fine-tuned positional layout for remaining inputs */
 /* Left D-Pad cluster */
-.controller.ps5 .dpad {
+.controller.xbox-one .dpad {
     width: 95px !important;
     height: 95px !important;
     top: 215px !important;
@@ -96,7 +96,7 @@
 }
  
 /* Right Face Button cluster */
-.controller.ps5 .paddles {
+.controller.xbox-one .paddles {
     width: 105px !important;
     height: 105px !important;
     top: 210px !important;
@@ -104,8 +104,8 @@
 }
  
 /* Bumpers & Triggers */
-.controller.ps5 .bumpers .bumper.left { top: 135px !important; left: 115px !important; width: 75px !important; height: 25px !important; border-radius: 4px !important; }
-.controller.ps5 .bumpers .bumper.right { top: 135px !important; left: 410px !important; width: 75px !important; height: 25px !important; border-radius: 4px !important; }
-.controller.ps5 .triggers .trigger.left { top: 90px !important; left: 125px !important; width: 55px !important; height: 35px !important; border-radius: 6px !important; }
-.controller.ps5 .triggers .trigger.right { top: 90px !important; left: 420px !important; width: 55px !important; height: 35px !important; border-radius: 6px !important; }
+.controller.xbox-one .bumpers .bumper.left { top: 135px !important; left: 115px !important; width: 75px !important; height: 25px !important; border-radius: 4px !important; }
+.controller.xbox-one .bumpers .bumper.right { top: 135px !important; left: 410px !important; width: 75px !important; height: 25px !important; border-radius: 4px !important; }
+.controller.xbox-one .triggers .trigger.left { top: 90px !important; left: 125px !important; width: 55px !important; height: 35px !important; border-radius: 6px !important; }
+.controller.xbox-one .triggers .trigger.right { top: 90px !important; left: 420px !important; width: 55px !important; height: 35px !important; border-radius: 6px !important; }
  
